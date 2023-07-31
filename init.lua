@@ -1,6 +1,5 @@
 -- TODO ripgrep
 -- TODO auto comments
--- TODO add file tree
 -- TODO add telescope
 -- TODO add lsp
 require('my.settings')
@@ -18,5 +17,18 @@ require('lazy').setup({
                 -- Configuration here, or leave empty to use defaults
             })
         end
+    },
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end,
     }
 })
+
+require("nvim-tree").setup()
