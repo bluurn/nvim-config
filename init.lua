@@ -1,6 +1,10 @@
+-- TODO ripgrep
+-- TODO auto comments
+-- TODO add file tree
+-- TODO add telescope
+-- TODO add lsp
 require('my.settings')
 require('my.quickfix_toggle')
-require('my.netrw_toggle')
 require('my.keymaps')
 require('ext.lazy')
 
