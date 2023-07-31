@@ -1,40 +1,3 @@
--- TODO add lsp
--- TODO ripgrep
--- TODO auto comments
--- TODO add telescope
--- TODO git
-require("my.settings")
-require("my.keymaps")
-require("ext.lazy")
-require("ext/lsp")
-
-require('lazy').setup({
-    {
-        "kylechui/nvim-surround",
-        version = "*",
-        event = "VeryLazy",
-        config = function()
-            require("nvim-surround").setup({})
-        end
-    },
-    {
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-        config = function()
-            require("nvim-tree").setup {}
-        end,
-    },
-    { "nvim-treesitter/nvim-treesitter" },
-    { "neovim/nvim-lspconfig" },
-    { "williamboman/mason.nvim" },
-    { "williamboman/mason-lspconfig.nvim" },
-})
-
-
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -65,8 +28,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
-
-require("nvim-tree").setup()
-require("mason").setup()
-require("mason-lspconfig").setup()
-
