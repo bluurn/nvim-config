@@ -69,7 +69,9 @@ local plugins = {
         config = function ()
             require("nvim-autopairs").setup()
         end
-    }
+    },
+    { "folke/zen-mode.nvim" },
+    { "folke/twilight.nvim" },
 }
 
 require('lazy').setup(plugins)
