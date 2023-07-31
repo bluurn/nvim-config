@@ -43,7 +43,8 @@ local plugins = {
     {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
       dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+    },
+    { "NeogitOrg/neogit", dependencies = "nvim-lua/plenary.nvim", config = true }
 }
 
 require('lazy').setup(plugins)
