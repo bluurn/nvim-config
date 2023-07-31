@@ -40,6 +40,10 @@ local plugins = {
     { "saadparwaiz1/cmp_luasnip" },
     { "L3MON4D3/LuaSnip" },
     { "numToStr/Comment.nvim" },
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 }
 
 require('lazy').setup(plugins)
