@@ -29,6 +29,11 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 end
 
+lspconfig.cmakelang.setup {
+    autostart = true,
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
 lspconfig.clangd.setup {
     autostart = true,
     capabilities = capabilities,
