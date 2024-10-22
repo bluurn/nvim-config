@@ -7,7 +7,8 @@ vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<cr>", { silent = true, desc = 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open diagnostic popup" })
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Toggle diagnostic quickfix"})
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Toggle diagnostic quickfix" })
+vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, { desc = "Code action..." })
 
 local keys = "csvw"
 for key in keys:gmatch(".") do

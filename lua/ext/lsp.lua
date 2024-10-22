@@ -33,12 +33,7 @@ lspconfig.clangd.setup {
     autostart = true,
     capabilities = capabilities,
     on_attach = on_attach,
-}
-
-lspconfig.csharp_ls.setup {
-    autostart = true,
-    capabilities = capabilities,
-    on_attach = on_attach,
+    cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
 }
 
 lspconfig.lua_ls.setup {
@@ -59,16 +54,6 @@ lspconfig.lua_ls.setup {
             telemetry = { enable = false },
         },
     }
-}
-
-lspconfig.solargraph.setup {
-    autostart = true,
-    capabilities = capabilities,
-    settings = {
-        solargraph = {
-            diagnostics = true,
-        },
-    },
 }
 
 lspconfig.bashls.setup {
