@@ -71,7 +71,6 @@ local plugins = {
         end
     },
     { "folke/zen-mode.nvim" },
-    { "folke/twilight.nvim" },
     {
         "folke/which-key.nvim",
         event = "VeryLazy",

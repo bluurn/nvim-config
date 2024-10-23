@@ -11,7 +11,8 @@ vim.opt.number = true
 vim.opt.path:append { "**" }
 vim.opt.relativenumber = true
 vim.opt.smarttab = true
-vim.opt.termguicolors = true
 vim.opt.wildignore:append { "*.pyc", "node_modules", "bin", "obj" }
 vim.opt.wildignorecase = true
 vim.opt.ignorecase = true
+vim.opt.background = "light"
+vim.cmd([[colorscheme retrobox]])
