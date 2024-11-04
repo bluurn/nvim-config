@@ -33,13 +33,13 @@ local plugins = {
     { "neovim/nvim-lspconfig" },
     {
         "williamboman/mason.nvim",
-        config = function ()
+        config = function()
             require("mason").setup()
         end
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        config = function ()
+        config = function()
             require("mason-lspconfig").setup()
         end
     },
@@ -49,24 +49,25 @@ local plugins = {
     { "L3MON4D3/LuaSnip" },
     {
         "numToStr/Comment.nvim",
-        config = function ()
+        config = function()
             require("Comment").setup()
         end
     },
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.2',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
         "NeogitOrg/neogit",
         dependencies = "nvim-lua/plenary.nvim",
-        config =  function ()
+        config = function()
             require("neogit").setup()
         end
     },
     {
         "windwp/nvim-autopairs",
-        config = function ()
+        config = function()
             require("nvim-autopairs").setup()
         end
     },
@@ -78,10 +79,16 @@ local plugins = {
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
-        opts = { }
+        opts = {}
     },
-    { "gregorias/coerce.nvim", tag = 'v3.0.0', config = true },
-    { "jose-elias-alvarez/null-ls.nvim" }
+    { "gregorias/coerce.nvim",          tag = 'v3.0.0', config = true },
+    { "jose-elias-alvarez/null-ls.nvim" },
+    {
+        "craftzdog/solarized-osaka.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    }
 }
 
 require('lazy').setup(plugins)
