@@ -15,4 +15,4 @@ vim.opt.wildignore:append { "*.pyc", "node_modules", "bin", "obj" }
 vim.opt.wildignorecase = true
 vim.opt.ignorecase = true
 vim.opt.background = "light"
-vim.cmd([[colorscheme retrobox]])
+vim.cmd([[colorscheme vim]])

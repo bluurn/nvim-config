@@ -1,7 +1,7 @@
 vim.keymap.set("n", "<leader>m", ":make<cr>", { silent = true, desc = "Make" })
 
-vim.keymap.set("n", "<leader>ce", ":e $MYVIMRC<cr>", { silent = true, desc = "Edit config" })
-vim.keymap.set("n", "<leader>cr", ":so $MYVIMRC<cr>", { silent = true, desc = "Reload config" })
+vim.keymap.set("n", "<leader>ke", ":e $MYVIMRC<cr>", { silent = true, desc = "Edit config" })
+vim.keymap.set("n", "<leader>kr", ":so $MYVIMRC<cr>", { silent = true, desc = "Reload config" })
 vim.keymap.set("n", "<leader>h", ":noh<cr>", { silent = true, desc = "Kill highlight" })
 vim.keymap.set("n", "<leader>b", ":NvimTreeToggle<cr>", { silent = true, desc = "Toggle tree" })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open diagnostic popup" })
