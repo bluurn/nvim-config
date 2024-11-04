@@ -9,8 +9,10 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Prev diagnostic" }
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Toggle diagnostic quickfix" })
 vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, { desc = "Code action..." })
+vim.keymap.set("n", "<leader>fo", vim.lsp.buf.format, { desc = "Format" })
+
 
 local keys = "csvw"
 for key in keys:gmatch(".") do
-    vim.keymap.set("n", "<leader>w"..key, "<c-w>"..key, { silent = true })
+    vim.keymap.set("n", "<leader>w" .. key, "<c-w>" .. key, { silent = true })
 end

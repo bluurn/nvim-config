@@ -80,7 +80,8 @@ local plugins = {
         end,
         opts = { }
     },
-    { "gregorias/coerce.nvim", tag = 'v3.0.0', config = true }
+    { "gregorias/coerce.nvim", tag = 'v3.0.0', config = true },
+    { "jose-elias-alvarez/null-ls.nvim" }
 }
 
 require('lazy').setup(plugins)
