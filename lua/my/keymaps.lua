@@ -12,7 +12,7 @@ vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, { desc = "Code action.
 vim.keymap.set("n", "<leader>fo", vim.lsp.buf.format, { desc = "Format" })
 
 
-local keys = "csvw"
-for key in keys:gmatch(".") do
-    vim.keymap.set("n", "<leader>w" .. key, "<c-w>" .. key, { silent = true })
-end
+--local keys = "csvw"
+--for key in keys:gmatch(".") do
+--    vim.keymap.set("n", "<leader>w" .. key, "<c-w>" .. key, { silent = true })
+--end
